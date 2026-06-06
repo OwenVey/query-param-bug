@@ -12,7 +12,7 @@ export const Route = createFileRoute('/')({
     param2: v.optional(v.fallback(v.number(), DEFAULTS.param2), DEFAULTS.param2),
   }),
   search: {
-    middlewares: [retainSearchParams(['param2']), stripSearchParams(DEFAULTS)],
+    middlewares: [retainSearchParams(['param1', 'param2']), stripSearchParams(DEFAULTS)],
   },
   component: Home,
 });
